@@ -1,0 +1,22 @@
+<h2 class="page-header">Search File</h2>
+{{#if errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+{{/if}}
+<form method="post" action="/searchfiles">
+   <div class="form-group">
+    <label>Enter File Name</label>
+    <input type="text" class="form-control" placeholder="Enter process name" name="process">
+  </div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+</br>
+{{#if filename}}
+<div class="well">
+    <h4>File Name :{{filename}}</h4>
+    <h4>Key :{{value}}</h4>
+    <h4>Value :{{key}}</h4>
+</div>
+{{/if}}
+<hr>
